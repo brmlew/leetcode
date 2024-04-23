@@ -10,8 +10,6 @@ class Solution {
 
             while (j < k) {
                 int sum = nums[i] + nums[j] + nums[k];
-                //System.out.println("sum: " + sum + " i: " + i + ", " + nums[i] + " j: " + j + ", " + nums[j] + " k: " + k + ", " + nums[k]);
-                //System.out.println("result: " + result);
                 if (Math.abs(sum - target) < Math.abs(result - target)) result = sum;
 
                 if (sum == target) {
