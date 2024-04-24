@@ -17,15 +17,12 @@ class Solution {
         while (curr != null) {
             
             if (curr.next == null || curr.next.next == null) return result.next;
-            System.out.println("curr: " + curr.val + " next: " + curr.next.val + " nextx2: " + curr.next.next.val);
 
             ListNode temp1 = curr.next;
             ListNode temp2 = curr.next.next;
             temp1.next = temp2.next;
             temp2.next = temp1;
             curr.next = temp2;
-
-            System.out.println("curr: " + curr.val + " next: " + curr.next.val + " nextx2: " + curr.next.next.val);
 
             curr = curr.next.next;
         }
