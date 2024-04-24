@@ -24,7 +24,6 @@ class Solution {
                 temp.val = list1.val;
                 list1 = list1.next;
             } else if (list1.val <= list2.val) {
-                System.out.println("1: " + list1.val + " 2: " + list2.val);
                 temp.val = list1.val;
                 list1 = list1.next;
             } else {
