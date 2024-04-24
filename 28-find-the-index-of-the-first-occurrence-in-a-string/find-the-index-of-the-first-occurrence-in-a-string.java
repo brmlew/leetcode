@@ -6,7 +6,6 @@ class Solution {
         //if (haystack.equals(needle)) return 0;
 
         for (int i = 0; i <= haystack.length() - len; i++) {
-            System.out.println(haystack.substring(i, i + len) + " i: " + i);
             if (haystack.substring(i, i + len).equals(needle)) return i;
         }
 
