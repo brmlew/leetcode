@@ -5,13 +5,8 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        left = 0
-        while left < len(nums):
-            right = left + 1
-            while right < len(nums):
-                if nums[left] + nums[right] == target:
-                    return [left, right]
-                else:
-                    right += 1
-            left += 1
+        for i in range(len(nums)):
+            for j in range(i + 1, len(nums)):
+                if (i != j and nums[i] + nums[j] == target):
+                    return [i, j]
         
