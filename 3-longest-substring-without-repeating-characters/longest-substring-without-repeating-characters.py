@@ -10,7 +10,6 @@ class Solution(object):
         length = 0
 
         while right < len(s):
-            print("test: " + s[right] + ", " + str(right))
             if s[right] in letters:
                 if right - left > length:
                     length = right - left
