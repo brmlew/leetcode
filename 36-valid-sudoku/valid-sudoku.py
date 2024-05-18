@@ -38,7 +38,6 @@ class Solution(object):
                                 return False
                             else:
                                 existing.append(board[i*3 + k][j*3 + l])
-                                print(board[i*3 + k][j*3 + l],i*3, j*3, k, l, existing)
                         l += 1
                     k += 1
                 j += 1
