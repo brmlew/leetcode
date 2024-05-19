@@ -15,7 +15,7 @@ class Solution(object):
             else: 
                 high = mid
         row = low
-        print(row)
+        
         low, high = 0, len(matrix[row])
         while low <= high:
             if matrix[row][low] == target: return True
