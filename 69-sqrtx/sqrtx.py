@@ -4,12 +4,13 @@ class Solution(object):
         :type x: int
         :rtype: int
         """
-        result = 0
-        while True:
-            y = result * result
-            if y > x:
-                return result - 1
-            elif y == x:
-                return result
-            result += 1
+        l, r = 0, x
+        while l <= r:
+            mid = l + (r-l)//2
+            if mid * mid <= x < (mid+1)*(mid+1):
+                return mid
+            elif x < mid * mid:
+                r = mid - 1
+            else:
+                l = mid + 1
         
