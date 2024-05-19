@@ -18,8 +18,6 @@ class Solution(object):
                     if j not in cols: cols.append(j)
                 j += 1
             i += 1
-
-        print("rows: ", rows, "cols", cols)
         i = 0
         while i < m:
             j = 0
