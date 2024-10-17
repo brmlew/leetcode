@@ -21,7 +21,6 @@ class Solution {
                     int k = i + 1;
                     while (k < matrix.length) {
                         for (int l = 0; l < width; l++) {
-                            //System.out.println("i: " + i + " j: " + j + " k: " + k + " l: " + l + " width: " + width + " height: " + height + " matrix[k][j-width+1]: " + matrix[k][j-width+l] + " area: " + width*height);
                             result = Math.max(result, width * height);
                             if (matrix[k][j-width+l] != '1') {
                                 j = j - width + l;
