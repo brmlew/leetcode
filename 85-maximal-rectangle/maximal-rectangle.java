@@ -6,7 +6,6 @@ class Solution {
                 int max_width = 0;
                 if (matrix[i][j] == '1') {
 
-                    // get the width
                     int width = 0;
                     while (j < matrix[0].length) {
                         if (matrix[i][j] == '1') {
