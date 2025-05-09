@@ -15,14 +15,6 @@ class TextEditor {
         this.head = new Node('\0');
         this.curr = head;
     }
-
-    public void printHead() {
-        Node temp = head;
-        while (temp != null) {
-            System.out.print(temp.letter);
-            temp = temp.next;
-        }
-    }
     
     public void addText(String text) {
         for (int i = 0; i < text.length(); i++) {
