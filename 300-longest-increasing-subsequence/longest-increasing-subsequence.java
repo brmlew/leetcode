@@ -27,7 +27,6 @@ class Solution {
             }
         }
         map.put(index, result);
-        System.out.println("index: " + index + " map.get: " + map.get(index));
         return result;
     }
 
