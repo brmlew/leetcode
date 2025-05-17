@@ -1,7 +1,22 @@
 class Solution {
     public int uniquePaths(int m, int n) {
-        HashMap<List<Integer>, Integer> map = new HashMap<>();
-        return helper(m, n, 0, 0, map);
+        int[][] area = new int[m][n];
+
+        for (int i = 0; i < m; i++) {
+            area[i][n - 1] = 1;
+        }
+
+        for (int i = 0; i < n; i++) {
+            area[m-1][i] = 1;
+        }
+
+        for (int i = m - 2; i >= 0; i--) {
+            for (int j = n - 2; j >= 0; j--) {
+                area[i][j] = area[i+1][j] + area[i][j+1];
+            }
+        }
+
+        return area[0][0];
     }
 
     public int helper(int m, int n, int i, int j, HashMap<List<Integer>, Integer> map) {
