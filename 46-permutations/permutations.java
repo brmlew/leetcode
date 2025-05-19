@@ -4,7 +4,6 @@ class Solution {
     }
 
     public List<List<Integer>> helper(int[] nums, int index) {
-        System.out.println("index: " + index);
         List<List<Integer>> result = new ArrayList<>();
         if (index == nums.length - 1) {
             List<Integer> temp = new ArrayList<>();
