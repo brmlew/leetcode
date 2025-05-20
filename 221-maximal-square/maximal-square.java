@@ -11,8 +11,7 @@ class Solution {
         for (int i = 1; i < matrix.length; i++) {
             for (int j = 1; j < matrix[0].length; j++) {
                 if (matrix[i][j] != '0') {
-                    int temp = Math.min(matrix[i-1][j] - '0', matrix[i-1][j-1] - '0');
-                    temp = Math.min(temp, matrix[i][j-1] - '0') + 1;
+                    int temp = Math.min(matrix[i-1][j] - '0', Math.min(matrix[i-1][j-1] - '0', matrix[i][j-1] - '0')) + 1;
                     //System.out.println("temp: " + temp + " i: " + i + " j: " + j);
                     result = Math.max(result, temp);
                     matrix[i][j] = (char) (temp + '0');
